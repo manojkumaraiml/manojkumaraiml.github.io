@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teaching Pitch — M Manoj Kumar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:            #06060f;
+      --bg-card:       rgba(255,255,255,0.04);
+      --border:        rgba(255,255,255,0.08);
+      --border-accent: rgba(124,58,237,0.45);
+      --text:          #f1f5f9;
+      --text-secondary:#94a3b8;
+      --text-muted:    #64748b;
+      --purple:        #7c3aed;
+      --purple-light:  #a78bfa;
+      --cyan:          #06b6d4;
+      --cyan-light:    #67e8f9;
+      --amber:         #f59e0b;
+      --grad: linear-gradient(135deg, #7c3aed, #06b6d4);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 3rem;
+    }
+
+    /* ── HEADER ── */
+    .pitch-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2rem;
+      padding-bottom: 1.75rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .pitch-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+      margin-bottom: 0.35rem;
+    }
+
+    .pitch-role {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .pitch-contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      text-align: right;
+    }
+
+    .pitch-contacts a,
+    .pitch-contacts span {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.82rem;
+      transition: color 0.2s;
+    }
+
+    .pitch-contacts a:hover { color: var(--purple-light); }
+
+    /* ── INSTITUTE BADGES ── */
+    .pitch-edu-row {
+      display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.65rem;
+    }
+
+    .pitch-edu-badge {
+      font-size: 0.74rem; font-weight: 600;
+      padding: 0.22rem 0.8rem; border-radius: 20px;
+      background: rgba(124,58,237,0.1);
+      border: 1px solid rgba(124,58,237,0.28);
+      color: var(--purple-light);
+    }
+
+    .pitch-edu-badge--cyan {
+      background: rgba(6,182,212,0.08);
+      border-color: rgba(6,182,212,0.28);
+      color: var(--cyan-light);
+    }
+
+    /* ── STATEMENT ── */
+    .pitch-statement {
+      font-size: 0.93rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      padding: 1.1rem 1.4rem;
+      background: rgba(124,58,237,0.05);
+      border: 1px solid rgba(124,58,237,0.18);
+      border-left: 3px solid var(--purple);
+      border-radius: 0 12px 12px 0;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    /* ── BODY GRID ── */
+    .pitch-body {
+      display: grid;
+      grid-template-columns: 1fr 230px;
+      gap: 2.5rem;
+    }
+
+    /* ── SECTION LABELS ── */
+    .section-label {
+      font-size: 0.71rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--purple-light);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── COURSE CARDS ── */
+    .courses {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .course-card {
+      padding: 0.9rem 1.15rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--purple);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .course-card.cc-cyan  { border-left-color: var(--cyan); }
+    .course-card.cc-amber { border-left-color: var(--amber); }
+
+    .course-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .level-tag {
+      font-size: 0.67rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 1px 7px;
+      border-radius: 20px;
+    }
+
+    .lv-foundation   { background: rgba(16,185,129,0.12);  color: #6ee7b7; }
+    .lv-intermediate { background: rgba(6,182,212,0.12);   color: var(--cyan-light); }
+    .lv-advanced     { background: rgba(124,58,237,0.12);  color: var(--purple-light); }
+
+    .course-topics {
+      font-size: 0.79rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ── FORMAT ROW ── */
+    .format-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.65rem;
+    }
+
+    .format-box {
+      padding: 0.75rem 0.6rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .fb-label { font-size: 0.67rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+    .fb-value { font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 600; color: var(--text); margin-top: 0.25rem; }
+
+    /* ── SIDEBAR ── */
+    .sidebar section { margin-bottom: 1.6rem; }
+
+    .cred-item {
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+      margin-bottom: 0.8rem;
+    }
+
+    .cred-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--purple-light);
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+
+    .cred-title { font-weight: 600; font-size: 0.83rem; }
+    .cred-sub   { font-size: 0.76rem; color: var(--text-muted); margin-top: 0.1rem; }
+
+    .badge-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.6rem 0.75rem;
+      background: rgba(245,158,11,0.06);
+      border: 1px solid rgba(245,158,11,0.2);
+      border-radius: 10px;
+      margin-bottom: 0.55rem;
+    }
+
+    .badge-icon  { font-size: 1.05rem; }
+    .badge-title { font-weight: 600; font-size: 0.81rem; color: #fcd34d; }
+    .badge-sub   { font-size: 0.73rem; color: var(--text-muted); }
+
+    .pub-item {
+      font-size: 0.77rem;
+      color: var(--text-muted);
+      margin-bottom: 0.55rem;
+      line-height: 1.5;
+    }
+
+    .pub-item strong { color: var(--text-secondary); }
+
+    .pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .pill {
+      font-size: 0.73rem;
+      padding: 0.2rem 0.65rem;
+      border-radius: 20px;
+      background: rgba(124,58,237,0.1);
+      border: 1px solid rgba(124,58,237,0.22);
+      color: var(--purple-light);
+    }
+
+    .pill.cyan {
+      background: rgba(6,182,212,0.08);
+      border-color: rgba(6,182,212,0.22);
+      color: var(--cyan-light);
+    }
+
+    /* ── CTA FOOTER ── */
+    .pitch-cta {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .cta-text { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.88rem; }
+    .cta-sub  { font-size: 0.79rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+    .cta-btns { display: flex; gap: 0.65rem; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.55rem 1.1rem; border-radius: 10px;
+      font-size: 0.82rem; font-weight: 600;
+      text-decoration: none; transition: all 0.25s;
+      cursor: pointer; border: none;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-primary {
+      background: var(--grad); color: #fff;
+      box-shadow: 0 3px 15px rgba(124,58,237,0.3);
+    }
+
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(124,58,237,0.45); }
+
+    .btn-ghost {
+      background: var(--bg-card); color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-ghost:hover { border-color: var(--border-accent); background: rgba(255,255,255,0.07); }
+
+    /* ── PRINT BUTTON ── */
+    .print-fab {
+      position: fixed;
+      bottom: 1.75rem;
+      right: 1.75rem;
+      z-index: 50;
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      body { background: #ffffff; color: #1e293b; }
+
+      .page { padding: 1.25rem; max-width: 100%; }
+
+      .pitch-name {
+        background: none;
+        -webkit-text-fill-color: #7c3aed;
+        color: #7c3aed;
+      }
+
+      .pitch-statement {
+        background: #f8fafc;
+        border-color: #e2e8f0;
+        border-left-color: #7c3aed;
+        color: #475569;
+      }
+
+      .course-card, .format-box, .badge-item {
+        background: #f8fafc;
+        border-color: #e2e8f0;
+      }
+
+      .course-card.cc-cyan  { border-left-color: var(--cyan); }
+      .course-card.cc-amber { border-left-color: var(--amber); }
+
+      .section-label { color: #7c3aed; }
+      .section-label::after { background: #e2e8f0; }
+
+      .cred-title, .fb-value { color: #1e293b; }
+      .cred-sub, .course-topics, .pub-item, .fb-label, .cta-sub, .pitch-role { color: #64748b; }
+      .pitch-contacts a, .pitch-contacts span { color: #475569; }
+
+      .pitch-header { border-bottom-color: #e2e8f0; }
+      .pitch-cta    { border-top-color:    #e2e8f0; }
+
+      .pill      { background: #ede9fe; border-color: #ddd6fe; color: #7c3aed; }
+      .pill.cyan { background: #cffafe; border-color: #a5f3fc; color: #0e7490; }
+
+      .lv-foundation   { background: #dcfce7; color: #166534; }
+      .lv-intermediate { background: #cffafe; color: #0e7490; }
+      .lv-advanced     { background: #ede9fe; color: #5b21b6; }
+
+      .cta-text { color: #1e293b; }
+      .badge-title { color: #92400e; }
+
+      .print-fab { display: none; }
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 680px) {
+      .pitch-body          { grid-template-columns: 1fr; }
+      .format-row          { grid-template-columns: repeat(2, 1fr); }
+      .pitch-header        { flex-direction: column; gap: 1rem; }
+      .pitch-contacts      { text-align: left; }
+      .pitch-name          { font-size: 1.6rem; }
+      .print-fab           { bottom: 1rem; right: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="pitch-header">
+    <div>
+      <div class="pitch-name">M Manoj Kumar</div>
+      <div class="pitch-role">AI Engineer &nbsp;·&nbsp; Guest Lecturer &nbsp;·&nbsp; Industry Mentor</div>
+      <div class="pitch-edu-row">
+        <span class="pitch-edu-badge">MSc Statistics · University of Hyderabad</span>
+        <span class="pitch-edu-badge pitch-edu-badge--cyan">B.Tech · IIIT Jabalpur</span>
+      </div>
+    </div>
+    <div class="pitch-contacts">
+      <a href="mailto:mmanojkumar.aiml@gmail.com">mmanojkumar.aiml@gmail.com</a>
+      <a href="tel:+918349326768">+91 83493 26768</a>
+      <a href="https://linkedin.com/in/mmanojkumar-aiml" target="_blank">linkedin.com/in/mmanojkumar-aiml</a>
+      <span>Hyderabad, India</span>
+    </div>
+  </div>
+
+  <!-- STATEMENT -->
+  <div class="pitch-statement">
+    Active AI Engineer with 3+ years of industry experience in Machine Learning, NLP, and Generative AI.
+    I bring real-world perspective into academia — sharing practical knowledge that bridges the gap
+    between classroom concepts and production-grade AI systems.
+  </div>
+
+  <!-- BODY -->
+  <div class="pitch-body">
+
+    <!-- MAIN COLUMN -->
+    <div>
+
+      <div class="section-label">Courses &amp; Topics I Can Teach</div>
+
+      <div class="courses">
+
+        <div class="course-card">
+          <div class="course-title">
+            Introduction to Machine Learning
+            <span class="level-tag lv-foundation">Foundation</span>
+          </div>
+          <div class="course-topics">
+            Supervised &amp; Unsupervised Learning · Regression, Classification, Clustering ·
+            Model Evaluation (KS, GINI, AUC) · Feature Engineering · scikit-learn, Python
+          </div>
+        </div>
+
+        <div class="course-card cc-cyan">
+          <div class="course-title">
+            Deep Learning &amp; Neural Networks
+            <span class="level-tag lv-intermediate">Intermediate</span>
+          </div>
+          <div class="course-topics">
+            Backpropagation, CNNs, Attention Mechanisms · Transfer Learning &amp; Fine-tuning ·
+            LoRA / PEFT · PyTorch, TensorFlow, Hugging Face
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-title">
+            Natural Language Processing (NLP)
+            <span class="level-tag lv-intermediate">Intermediate</span>
+          </div>
+          <div class="course-topics">
+            Tokenization, Embeddings, BERT · Named Entity Recognition (BIO Tagging, DeBERTa) ·
+            Sentiment Analysis · spaCy, NLTK, Hugging Face
+          </div>
+        </div>
+
+        <div class="course-card cc-cyan">
+          <div class="course-title">
+            Large Language Models &amp; Generative AI
+            <span class="level-tag lv-advanced">Advanced</span>
+          </div>
+          <div class="course-topics">
+            Transformer Architecture · Prompt Engineering, In-Context Learning ·
+            RAG Pipelines (Ingestion, Chunking, Vector Search) · LLM Fine-tuning with LoRA · FAISS / Pinecone
+          </div>
+        </div>
+
+        <div class="course-card cc-amber">
+          <div class="course-title">
+            Agentic AI &amp; Multi-Agent Systems
+            <span class="level-tag lv-advanced">Advanced</span>
+          </div>
+          <div class="course-topics">
+            ReAct Agents, Tool Calling · LangGraph Orchestration &amp; Dynamic Routing ·
+            Conversational &amp; Long-term Memory · LangChain, LangGraph
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section-label">Delivery Formats</div>
+      <div class="format-row">
+        <div class="format-box">
+          <div class="fb-label">Mode</div>
+          <div class="fb-value">Online / Offline</div>
+        </div>
+        <div class="format-box">
+          <div class="fb-label">Duration</div>
+          <div class="fb-value">1 hr – Semester</div>
+        </div>
+        <div class="format-box">
+          <div class="fb-label">Audience</div>
+          <div class="fb-value">UG / PG / Research</div>
+        </div>
+        <div class="format-box">
+          <div class="fb-label">Style</div>
+          <div class="fb-value">Project-Based</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <section>
+        <div class="section-label">Credentials</div>
+        <div class="cred-item">
+          <div class="cred-dot"></div>
+          <div>
+            <div class="cred-title">AI Engineer — Centific</div>
+            <div class="cred-sub">Dec 2024 – Present · Hyderabad</div>
+          </div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-dot"></div>
+          <div>
+            <div class="cred-title">ML Engineer — FactSet</div>
+            <div class="cred-sub">Jun 2023 – Dec 2024</div>
+          </div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-dot"></div>
+          <div>
+            <div class="cred-title">M.Sc. Statistics</div>
+            <div class="cred-sub">University of Hyderabad · 2021–2023 · CGPA 8.85 / 10</div>
+          </div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-dot"></div>
+          <div>
+            <div class="cred-title">B.Tech — IIIT Jabalpur</div>
+            <div class="cred-sub">Indian Institute of Information Technology · 2017–2021</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-label">Awards</div>
+        <div class="badge-item">
+          <span class="badge-icon">⭐</span>
+          <div>
+            <div class="badge-title">Rising Star Award</div>
+            <div class="badge-sub">Centific · Q3 2024</div>
+          </div>
+        </div>
+        <div class="badge-item">
+          <span class="badge-icon">🎖</span>
+          <div>
+            <div class="badge-title">Blue Ribbon Award</div>
+            <div class="badge-sub">FactSet · Q1 2024</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-label">Publications</div>
+        <div class="pub-item">
+          <strong>E-Commerce Logistics Modelling</strong>
+          · Enterprise Information Systems Journal
+        </div>
+        <div class="pub-item">
+          <strong>Berth &amp; Quay Crane Allocation</strong>
+          · 5th Intl. Conf., NIT Surat
+        </div>
+        <div class="pub-item">
+          <strong>Insurance Claim Cost Prediction</strong>
+          · MSc Thesis, UoH
+        </div>
+      </section>
+
+      <section>
+        <div class="section-label">Core Toolkit</div>
+        <div class="pills">
+          <span class="pill">Python</span>
+          <span class="pill">PyTorch</span>
+          <span class="pill cyan">LangChain</span>
+          <span class="pill cyan">LangGraph</span>
+          <span class="pill">Hugging Face</span>
+          <span class="pill">FAISS</span>
+          <span class="pill cyan">FastAPI</span>
+          <span class="pill">R · SQL</span>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="pitch-cta">
+    <div>
+      <div class="cta-text">Open to Guest Lectures · Adjunct Faculty · Workshops · Mentoring</div>
+      <div class="cta-sub">Flexible on scheduling — happy to align with your academic calendar</div>
+    </div>
+    <div class="cta-btns">
+      <a href="mailto:mmanojkumar.aiml@gmail.com" class="btn btn-primary">Send Email</a>
+      <a href="https://linkedin.com/in/mmanojkumar-aiml" target="_blank" class="btn btn-ghost">LinkedIn</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="print-fab">
+  <button onclick="window.print()" class="btn btn-ghost">🖨&nbsp; Save as PDF</button>
+</div>
+
+</body>
+</html>

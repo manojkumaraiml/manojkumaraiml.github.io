@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio PDF — M Manoj Kumar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .pdf-hero {
+      min-height: calc(100vh - 64px);
+      display: flex; align-items: center; justify-content: center;
+      padding: 3rem 2rem;
+    }
+    .pdf-card {
+      max-width: 680px; width: 100%;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 24px; padding: 3rem;
+      text-align: center; backdrop-filter: blur(10px);
+    }
+    .pdf-icon { font-size: 3.5rem; margin-bottom: 1.5rem; }
+    .pdf-card h1 { font-size: 1.8rem; margin-bottom: 0.75rem; }
+    .pdf-card p { color: var(--text-secondary); line-height: 1.75; margin-bottom: 0.75rem; }
+    .pdf-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+    .pdf-divider { height: 1px; background: var(--border); margin: 2rem 0; }
+    .highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: left; margin-top: 1.5rem; }
+    @media (max-width: 560px) { .highlights { grid-template-columns: 1fr; } }
+    .hl-item {
+      padding: 1rem; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid var(--border);
+    }
+    .hl-label { font-size: 0.74rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.3rem; }
+    .hl-value { font-family: 'Space Grotesk',sans-serif; font-weight: 600; font-size: 0.92rem; }
+  </style>
+</head>
+<body>
+  <div class="bg-mesh"></div>
+  <nav id="main-nav"></nav>
+
+  <div class="content-wrapper page">
+    <div class="pdf-hero">
+      <div class="pdf-card">
+
+        <div class="pdf-icon">🎓</div>
+        <h1 class="gradient-text">Teaching Portfolio</h1>
+        <p>
+          A one-page teaching pitch covering courses I can deliver, credentials, publications, and awards —
+          tailored for colleges, universities, bootcamps, and workshops.
+        </p>
+
+        <!-- Primary actions -->
+        <div class="pdf-actions">
+          <a href="teaching-pitch.html" target="_blank" class="btn btn-primary" style="font-size:1rem;padding:0.85rem 2rem;">
+            🎓&nbsp; Open Teaching Pitch
+          </a>
+          <a
+            href="mailto:mmanojkumar.aiml@gmail.com?subject=Mentoring%20%2F%20Placement%20Prep%20Session&body=Hi%20Manoj%2C%0A%0AI%20am%20interested%20in%20a%20mentoring%20%2F%20placement%20prep%20session.%0A%0AName%3A%20%0ATopic%20of%20interest%3A%20%0APreferred%20time%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you!"
+            class="btn btn-outline"
+            style="font-size:1rem;padding:0.85rem 2rem;"
+          >
+            🎯&nbsp; Book a Session
+          </a>
+        </div>
+        <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.5rem;margin-bottom:0;">
+          Mentoring · Placement Prep · Resume Review · Career Guidance
+        </p>
+
+        <div class="pdf-divider"></div>
+
+        <div style="text-align:left;">
+          <div style="font-size:0.82rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1rem;">At a glance</div>
+          <div class="highlights">
+            <div class="hl-item">
+              <div class="hl-label">Current Role</div>
+              <div class="hl-value" style="color:var(--purple-light);">AI Engineer @ Centific</div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-label">Experience</div>
+              <div class="hl-value">3+ Years in AI/ML</div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-label">Courses</div>
+              <div class="hl-value" style="color:var(--cyan-light);">ML · NLP · LLMs · Agents</div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-label">Education</div>
+              <div class="hl-value" style="color:var(--purple-light);">MSc Statistics</div>
+              <div style="font-size:0.78rem;color:var(--text-secondary);margin-top:0.15rem;">University of Hyderabad</div>
+              <div style="height:1px;background:var(--border);margin:0.65rem 0;"></div>
+              <div class="hl-value" style="color:var(--cyan-light);">B.Tech</div>
+              <div style="font-size:0.78rem;color:var(--text-secondary);margin-top:0.15rem;">IIIT Jabalpur</div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-label">Awards</div>
+              <div class="hl-value" style="color:#fcd34d;">⭐ Rising Star Award</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.15rem;">Centific · Q3 2024</div>
+              <div style="height:1px;background:var(--border);margin:0.65rem 0;"></div>
+              <div class="hl-value" style="color:#fcd34d;">🎖 Blue Ribbon Award</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.15rem;">FactSet · Q1 2024</div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-label">Publications</div>
+              <div class="hl-value" style="font-size:0.82rem;">E-Commerce Logistics Modelling</div>
+              <div style="font-size:0.76rem;color:var(--purple-light);margin-top:0.15rem;">Enterprise Information Systems Journal</div>
+              <div style="height:1px;background:var(--border);margin:0.65rem 0;"></div>
+              <div class="hl-value" style="font-size:0.82rem;">Berth &amp; Quay Crane Allocation</div>
+              <div style="font-size:0.76rem;color:var(--cyan-light);margin-top:0.15rem;">International Conference on Industrial Engineering, NIT Surat</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pdf-divider"></div>
+        <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:0;">
+          Also reach me on
+          <a href="https://linkedin.com/in/mmanojkumar-aiml" target="_blank" style="color:var(--cyan-light);">LinkedIn</a>
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>
+      <a href="index.html">Home</a> &nbsp;·&nbsp;
+      M Manoj Kumar &nbsp;·&nbsp;
+      <a href="teaching.html">Teaching</a>
+    </p>
+  </footer>
+
+  <script src="main.js"></script>
+  <script></script>
+</body>
+</html>

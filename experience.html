@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience — M Manoj Kumar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-mesh"></div>
+  <nav id="main-nav"></nav>
+
+  <div class="content-wrapper page">
+    <div class="section">
+
+      <span class="section-label reveal">Work History</span>
+      <h1 class="section-title reveal">Experience</h1>
+      <p class="section-body reveal">
+        From data science internships to production-grade AI systems — here's my journey building intelligent applications.
+      </p>
+
+      <div class="timeline">
+
+        <!-- ── Centific ──────────────────────────────────────── -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="company-card">
+            <div class="company-header">
+              <div class="company-left">
+                <div class="company-logo">
+                  <img
+                    src="https://logo.clearbit.com/centific.com"
+                    alt="Centific"
+                    onerror="this.parentElement.innerHTML='<span class=\'company-logo-text\'>C</span>'"
+                  />
+                </div>
+                <div>
+                  <a href="https://centific.com" target="_blank" rel="noopener" class="company-name">Centific</a>
+                  <div class="company-role">Artificial Intelligence Engineer</div>
+                </div>
+              </div>
+              <div class="company-meta">
+                <div class="company-duration">📅 Dec 2024 — Present</div>
+                <div class="company-location">📍 Hyderabad, India</div>
+              </div>
+            </div>
+
+            <div class="project-group">
+              <div class="project-name">Real-Time Intelligent Surveillance</div>
+              <ul class="bullets">
+                <li>Built real-time stalled vehicle detection pipeline using YOLO object detection and NVIDIA DeepStream on RTSP camera feeds.</li>
+                <li>Integrated a Vision-Language Model (Cosmos VLM) to detect and flag illegal dumping activities from live video streams.</li>
+                <li>Integrated RabbitMQ for asynchronous alert messaging and built API services delivering real-time notifications, vehicle details, and validation prompts to security teams.</li>
+                <li>Designed end-to-end workflow for automated detection, alerting, and officer validation.</li>
+              </ul>
+            </div>
+
+            <div class="project-group">
+              <div class="project-name">Sales Assistant Chatbot</div>
+              <ul class="bullets">
+                <li>Built a Multi-Agent chatbot system to help sales teams with product queries and automated PPT creation, leveraging agent orchestration, tool-calling agents, and specialized reasoning agents for domain-specific tasks.</li>
+                <li>Integrated SharePoint event triggers to ingest documents, perform preprocessing, vectorize content, and store embeddings for a scalable RAG pipeline.</li>
+                <li>Designed a LangGraph-based agent routing architecture to dynamically select between internal knowledge base queries, web search agents, and direct LLM reasoning.</li>
+                <li>Implemented SQL-backed conversational memory to support context-aware follow-up questions, long-term recall, and session continuity.</li>
+              </ul>
+            </div>
+
+            <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;">
+              <span class="tag">YOLO</span><span class="tag">DeepStream</span><span class="tag cyan">VLMs</span>
+              <span class="tag cyan">LangGraph</span><span class="tag">RabbitMQ</span><span class="tag">RAG</span>
+              <span class="tag">Multi-Agent</span><span class="tag cyan">FastAPI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── FactSet ─────────────────────────────────────────── -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="company-card">
+            <div class="company-header">
+              <div class="company-left">
+                <div class="company-logo">
+                  <img
+                    src="https://logo.clearbit.com/factset.com"
+                    alt="FactSet"
+                    onerror="this.parentElement.innerHTML='<span class=\'company-logo-text\'>F</span>'"
+                  />
+                </div>
+                <div>
+                  <a href="https://factset.com" target="_blank" rel="noopener" class="company-name">FactSet</a>
+                  <div class="company-role">Machine Learning Engineer</div>
+                </div>
+              </div>
+              <div class="company-meta">
+                <div class="company-duration">📅 Jun 2023 — Dec 2024</div>
+                <div class="company-location">📍 Hyderabad, India</div>
+              </div>
+            </div>
+
+            <div class="project-group">
+              <div class="project-name">Automated M&amp;A Document Processing</div>
+              <ul class="bullets">
+                <li>Designed and implemented an end-to-end ML-NLP pipeline for M&amp;A documents, encompassing preprocessing, document classification, and key entity extraction using XGBoost and transformer-based architectures.</li>
+                <li>Prepared annotated datasets with BIO tagging and fine-tuned a domain-adapted NER model using DeBERTa-v3 and LoRA, improving entity extraction accuracy and robustness.</li>
+                <li>Automated document ingestion, parsing, and entity extraction workflows, achieving a <strong style="color:#6ee7b7">30× reduction</strong> in manual review time.</li>
+              </ul>
+            </div>
+
+            <div class="project-group">
+              <div class="project-name">RAG-Based Chatbot for Financial Annotations</div>
+              <ul class="bullets">
+                <li>Built an end-to-end RAG pipeline for financial data collection, including document ingestion, chunking, and embedding generation.</li>
+                <li>Improved answer relevance and accuracy by refining retrieval and ranking workflows using semantic search and lightweight re-ranking.</li>
+                <li>Delivered a grounded, context-aware chatbot reducing manual annotation time by <strong style="color:#6ee7b7">4 minutes per document</strong> and improving team efficiency.</li>
+              </ul>
+            </div>
+
+            <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;">
+              <span class="tag">DeBERTa-v3</span><span class="tag">LoRA</span><span class="tag cyan">NER</span>
+              <span class="tag cyan">RAG</span><span class="tag">XGBoost</span><span class="tag">FAISS</span>
+              <span class="tag">Semantic Search</span><span class="tag cyan">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── HSBC ───────────────────────────────────────────── -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="company-card">
+            <div class="company-header">
+              <div class="company-left">
+                <div class="company-logo">
+                  <img
+                    src="https://logo.clearbit.com/hsbc.com"
+                    alt="HSBC"
+                    onerror="this.parentElement.innerHTML='<span class=\'company-logo-text\'>H</span>'"
+                  />
+                </div>
+                <div>
+                  <a href="https://hsbc.com" target="_blank" rel="noopener" class="company-name">HSBC</a>
+                  <div class="company-role">Data Science Intern</div>
+                </div>
+              </div>
+              <div class="company-meta">
+                <div class="company-duration">📅 Jan 2023 — Jun 2023</div>
+                <div class="company-location">📍 Bangalore, India</div>
+              </div>
+            </div>
+
+            <div class="project-group">
+              <div class="project-name">ATM Network Optimization</div>
+              <ul class="bullets">
+                <li>Built a Machine Learning framework using DBSCAN geospatial clustering to identify ATM closures and relocation targets in Hong Kong.</li>
+                <li>Enabled data-driven decisions that reduced operating costs by <strong style="color:#6ee7b7">6%</strong> and boosted projected transactions at relocated ATMs by <strong style="color:#6ee7b7">22%</strong>.</li>
+              </ul>
+            </div>
+
+            <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;">
+              <span class="tag">DBSCAN</span><span class="tag cyan">Geospatial Clustering</span>
+              <span class="tag">scikit-learn</span><span class="tag">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Synchrony ──────────────────────────────────────── -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="company-card">
+            <div class="company-header">
+              <div class="company-left">
+                <div class="company-logo">
+                  <img
+                    src="https://logo.clearbit.com/synchrony.com"
+                    alt="Synchrony"
+                    onerror="this.parentElement.innerHTML='<span class=\'company-logo-text\'>S</span>'"
+                  />
+                </div>
+                <div>
+                  <a href="https://synchrony.com" target="_blank" rel="noopener" class="company-name">Synchrony</a>
+                  <div class="company-role">Data Science Intern</div>
+                </div>
+              </div>
+              <div class="company-meta">
+                <div class="company-duration">📅 Aug 2022 — Dec 2022</div>
+                <div class="company-location">📍 Hyderabad, India</div>
+              </div>
+            </div>
+
+            <div class="project-group">
+              <div class="project-name">Credit Risk Model Validation</div>
+              <ul class="bullets">
+                <li>Performed validation and monitoring of credit risk and scorecard models using statistical metrics (KS, GINI, PSI, CSI), ensuring model performance and regulatory compliance.</li>
+                <li>Performed statistical tests to detect population drift in applicants, ensuring credit scorecard models stayed accurate and aligned with evolving customer profiles.</li>
+              </ul>
+            </div>
+
+            <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;">
+              <span class="tag">Model Validation</span><span class="tag cyan">Statistical Testing</span>
+              <span class="tag">KS / GINI / PSI</span><span class="tag">R</span><span class="tag">Python</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /timeline -->
+
+      <!-- Achievements -->
+      <div style="margin-top:4rem;">
+        <span class="section-label reveal">Recognition</span>
+        <h2 class="section-title reveal" style="font-size:2rem;">Achievements</h2>
+        <div class="ach-grid" style="margin-bottom:4rem;">
+          <div class="ach-card reveal">
+            <div class="ach-icon">⭐</div>
+            <div>
+              <div class="ach-name">Rising Star Award</div>
+              <div class="ach-detail">Recognition for excellence in work · Centific · Q3 2024</div>
+            </div>
+          </div>
+          <div class="ach-card reveal">
+            <div class="ach-icon">🏅</div>
+            <div>
+              <div class="ach-name">Blue Ribbon Award</div>
+              <div class="ach-detail">Recognition for excellence in work · FactSet · Q1 2024</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <span class="section-label reveal">Technical Stack</span>
+      <h2 class="section-title reveal" style="font-size:2rem;">Skills</h2>
+
+      <div class="skills-groups">
+
+        <div class="skill-group reveal">
+          <div class="skill-group-title">Programming &amp; Data</div>
+          <div class="skill-tags">
+            <span class="tag">Python</span><span class="tag">R</span><span class="tag">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-title">Machine Learning</div>
+          <div class="skill-tags">
+            <span class="tag">Regression</span><span class="tag">Classification</span>
+            <span class="tag">Clustering</span><span class="tag">Time-series</span>
+            <span class="tag">Feature Engineering</span><span class="tag">Model Evaluation</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-title">Deep Learning &amp; GenAI</div>
+          <div class="skill-tags">
+            <span class="tag cyan">Neural Networks</span><span class="tag cyan">Transformers</span>
+            <span class="tag cyan">LLMs</span><span class="tag cyan">LoRA / PEFT</span>
+            <span class="tag cyan">VLMs</span><span class="tag cyan">Agentic AI</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-title">NLP &amp; Vision</div>
+          <div class="skill-tags">
+            <span class="tag">NER</span><span class="tag">Text Processing</span>
+            <span class="tag">RAG</span><span class="tag">FAISS</span>
+            <span class="tag">Pinecone</span><span class="tag">Semantic Search</span>
+            <span class="tag">Object Detection (YOLO)</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-title">AI Frameworks</div>
+          <div class="skill-tags">
+            <span class="tag cyan">PyTorch</span><span class="tag cyan">TensorFlow</span>
+            <span class="tag cyan">scikit-learn</span><span class="tag cyan">Hugging Face</span>
+            <span class="tag cyan">LangChain</span><span class="tag cyan">LangGraph</span>
+            <span class="tag">DeepStream</span><span class="tag">OpenCV</span>
+            <span class="tag">NLTK</span><span class="tag">SpaCy</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-title">Infrastructure &amp; Deployment</div>
+          <div class="skill-tags">
+            <span class="tag amber">Docker</span><span class="tag amber">Azure</span>
+            <span class="tag amber">Git</span><span class="tag amber">MinIO</span>
+            <span class="tag amber">RabbitMQ</span><span class="tag amber">MLflow</span>
+            <span class="tag amber">ONNX / TensorRT</span>
+            <span class="tag amber">FastAPI</span><span class="tag amber">Flask</span>
+            <span class="tag amber">Streamlit</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- /section -->
+  </div>
+
+  <footer>
+    <p>
+      <a href="index.html">Home</a> &nbsp;·&nbsp;
+      M Manoj Kumar &nbsp;·&nbsp;
+      <a href="contact.html">Contact</a>
+    </p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
